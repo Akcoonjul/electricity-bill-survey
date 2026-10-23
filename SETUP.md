@@ -18,7 +18,7 @@ anyone can open, and a Google Sheet whose two tabs download as
    **Household Electricity Study — responses**.
 2. **Extensions → Apps Script**. Delete whatever is in `Code.gs` and paste the
    whole of this project's `Code.gs` over it.
-3. Near the top, replace `CHANGE_ME_TO_A_LONG_RANDOM_STRING` with a long random
+3. Near the top, replace `bcns24aft1electricitybillsurve` with a long random
    string of your own. Generate one however you like — 30-odd random letters and
    digits is plenty. Keep it on a scratch pad; you need the identical string in
    step 3.
