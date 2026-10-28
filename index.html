@@ -28,7 +28,7 @@
     --paper:#0E151D; --surface:#151E29; --surface-sunk:#1B2632;
     --ink:#E8EDF3; --ink-muted:#A3B0BF; --ink-faint:#74818F;
     --navy:#9CC2E8; --navy-soft:#1C2C3E;
-    --teal:#6FC2C9; --teal-soft:#17303233;
+    --teal:#6FC2C9; --teal-soft:#1A3236;
     --gold:#E3C078; --gold-soft:#2A2314; --gold-line:#5C4A22;
     --line:#26323F; --line-strong:#354453;
     --good:#7FCBA0; --good-soft:#16281E;
@@ -39,7 +39,7 @@
   --paper:#0E151D; --surface:#151E29; --surface-sunk:#1B2632;
   --ink:#E8EDF3; --ink-muted:#A3B0BF; --ink-faint:#74818F;
   --navy:#9CC2E8; --navy-soft:#1C2C3E;
-  --teal:#6FC2C9; --teal-soft:#17303233;
+  --teal:#6FC2C9; --teal-soft:#1A3236;
   --gold:#E3C078; --gold-soft:#2A2314; --gold-line:#5C4A22;
   --line:#26323F; --line-strong:#354453;
   --good:#7FCBA0; --good-soft:#16281E;
@@ -50,158 +50,211 @@
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--f-ui); font-size:15px; line-height:1.6;
+  font-family:var(--f-ui); font-size:16px; line-height:1.6;
   -webkit-font-smoothing:antialiased;
   padding-top:env(safe-area-inset-top,0px);
 }
 img{max-width:100%}
 [hidden]{display:none!important}
-.wrap{max-width:860px; margin:0 auto; padding-inline:20px; padding-block:0 150px}
+.wrap{max-width:720px; margin:0 auto; padding-inline:16px; padding-block:0 160px}
 
 /* ---------- masthead ---------- */
 .masthead{
   background:var(--surface); border-bottom:1px solid var(--line);
-  padding-block:28px 24px; padding-inline:20px; margin-bottom:34px;
+  padding-block:24px 20px; padding-inline:16px; margin-bottom:28px;
 }
-.masthead-inner{max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:20px}
-.crest{width:232px; max-width:70%; height:auto; display:block}
+.masthead-inner{max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:16px}
+.crest{width:200px; max-width:62%; height:auto; display:block}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .crest{background:#fff; padding:6px 10px; border-radius:4px}
 }
 :root[data-theme="dark"] .crest{background:#fff; padding:6px 10px; border-radius:4px}
 .school{
-  font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+  font-size:10.5px; letter-spacing:.11em; text-transform:uppercase;
   color:var(--ink-muted); font-weight:500; line-height:1.7;
 }
 h1{
-  font-family:var(--f-display); font-weight:600; font-size:clamp(26px,4.4vw,36px);
+  font-family:var(--f-display); font-weight:600; font-size:clamp(25px,5.2vw,33px);
   line-height:1.2; margin:0; text-wrap:balance; letter-spacing:-.01em;
 }
 .standfirst{
-  font-family:var(--f-display); font-size:17px; color:var(--ink-muted);
-  margin:10px 0 0; max-width:60ch;
+  font-family:var(--f-display); font-size:16.5px; color:var(--ink-muted);
+  margin:8px 0 0; max-width:56ch;
 }
 .meta-rule{
-  display:flex; flex-wrap:wrap; gap:6px 22px; margin-top:18px;
-  padding-top:16px; border-top:1px solid var(--line);
-  font-size:12.5px; color:var(--ink-muted);
+  display:flex; flex-wrap:wrap; gap:4px 20px; margin-top:14px;
+  padding-top:14px; border-top:1px solid var(--line);
+  font-size:12px; color:var(--ink-muted);
 }
 .meta-rule b{color:var(--ink); font-weight:600}
 
 /* ---------- sections ---------- */
 section{margin-bottom:30px}
-.sec-label{display:flex; align-items:baseline; gap:11px; margin-bottom:14px}
+.sec-label{display:flex; align-items:center; gap:11px; margin-bottom:8px}
 .sec-letter{
   font-family:var(--f-display); font-size:13px; font-weight:700;
   color:var(--surface); background:var(--navy);
-  width:24px; height:24px; border-radius:50%;
-  display:grid; place-items:center; flex:none; align-self:center;
+  width:26px; height:26px; border-radius:50%;
+  display:grid; place-items:center; flex:none;
 }
 :root[data-theme="dark"] .sec-letter{color:#0E151D}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec-letter{color:#0E151D}}
 h2{font-family:var(--f-display); font-size:21px; font-weight:600; margin:0; line-height:1.3; text-wrap:balance}
-.sec-note{font-size:13.5px; color:var(--ink-muted); margin:0 0 16px 35px; max-width:66ch}
-
-.panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px}
+.sec-note{font-size:14px; color:var(--ink-muted); margin:0 0 16px; max-width:60ch}
+.panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px}
 
 /* ---------- misconfiguration banner ---------- */
 .setup{
-  max-width:860px; margin:0 auto 24px; padding:14px 18px;
+  max-width:720px; margin:0 auto 20px; padding:14px 16px;
   background:var(--bad-soft); border:1px solid var(--bad-line);
   border-left:3px solid var(--bad); border-radius:var(--radius);
-  font-size:13.5px; color:var(--ink);
+  font-size:14px; color:var(--ink);
 }
 .setup b{font-family:var(--f-display); font-size:15px; display:block; margin-bottom:3px}
-.setup code{
-  font-family:ui-monospace,"Cascadia Mono",Consolas,monospace; font-size:12.5px;
-  background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:1px 5px;
-}
+.setup code{font-family:ui-monospace,Consolas,monospace; font-size:12.5px;
+  background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:1px 5px}
 
 /* ---------- consent ---------- */
 .consent{
   background:var(--gold-soft); border:1px solid var(--gold-line);
-  border-left:3px solid var(--gold); border-radius:var(--radius); padding:22px 24px;
+  border-left:3px solid var(--gold); border-radius:var(--radius); padding:18px 18px;
 }
 .consent h2{font-size:19px}
-.consent-body{font-size:14.5px; max-width:66ch}
+.consent-body{font-size:15px; max-width:60ch}
 .consent-body p{margin:0 0 12px}
 .consent-body ul{margin:0 0 12px; padding-left:20px}
 .consent-body li{margin-bottom:5px}
 .no-collect{
   background:var(--surface); border:1px dashed var(--gold-line);
-  border-radius:var(--radius); padding:13px 16px; margin:14px 0; font-size:14px;
+  border-radius:var(--radius); padding:13px 14px; margin:14px 0; font-size:14.5px;
 }
 .no-collect strong{font-family:var(--f-display); font-size:15px}
-.ticks{display:flex; flex-direction:column; gap:9px; margin-top:16px}
-.tick{display:flex; gap:11px; align-items:flex-start; font-size:14px; cursor:pointer}
-.tick input{margin:3px 0 0; width:17px; height:17px; flex:none; accent-color:var(--navy); cursor:pointer}
+.ticks{display:flex; flex-direction:column; gap:4px; margin-top:16px}
+.tick{
+  display:flex; gap:12px; align-items:flex-start; font-size:14.5px; cursor:pointer;
+  padding:10px 10px; border-radius:var(--radius); background:var(--surface);
+  border:1px solid transparent;
+}
+.tick:active{background:var(--navy-soft)}
+.tick input{margin:2px 0 0; width:22px; height:22px; flex:none; accent-color:var(--navy); cursor:pointer}
 
 /* ---------- locked state ---------- */
 #formArea{transition:opacity .25s}
-#formArea[aria-disabled="true"]{opacity:.42; pointer-events:none; filter:saturate(.3)}
+#formArea[aria-disabled="true"]{opacity:.4; pointer-events:none; filter:saturate(.25)}
 .lockbar{
-  display:flex; gap:10px; align-items:center; margin:18px 0 26px;
-  padding:11px 16px; border-radius:var(--radius);
+  display:flex; gap:10px; align-items:center; margin:16px 0 26px;
+  padding:12px 16px; border-radius:var(--radius);
   background:var(--navy-soft); border:1px solid var(--line);
-  font-size:13.5px; color:var(--ink-muted);
+  font-size:14px; color:var(--ink-muted);
 }
 .lockbar[data-state="open"]{background:var(--good-soft); border-color:var(--good); color:var(--good)}
-.dot{width:8px; height:8px; border-radius:50%; background:var(--ink-faint); flex:none}
+.dot{width:9px; height:9px; border-radius:50%; background:var(--ink-faint); flex:none}
 .lockbar[data-state="open"] .dot{background:var(--good)}
 
 /* ---------- fields ---------- */
-.grid{display:grid; gap:15px}
-.g3{grid-template-columns:repeat(3,1fr)}
+.grid{display:grid; gap:14px}
 .g2{grid-template-columns:repeat(2,1fr)}
-@media (max-width:600px){.g3,.g2{grid-template-columns:1fr}}
-label.f{display:flex; flex-direction:column; gap:5px; font-size:12px;
-  letter-spacing:.055em; text-transform:uppercase; color:var(--ink-muted); font-weight:500}
-input,select,textarea{
-  font-family:var(--f-ui); font-size:15px; color:var(--ink);
+@media (max-width:560px){.g2{grid-template-columns:1fr}}
+label.f{display:flex; flex-direction:column; gap:6px; font-size:12px;
+  letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted); font-weight:600}
+input,select{
+  font-family:var(--f-ui); font-size:16px; color:var(--ink);
   background:var(--surface); border:1px solid var(--line-strong);
-  border-radius:4px; padding:8px 10px; width:100%; min-width:0;
+  border-radius:5px; padding:11px 12px; width:100%; min-width:0;
   text-transform:none; letter-spacing:normal;
 }
 input[type=number]{font-variant-numeric:tabular-nums}
-input:focus-visible,select:focus-visible,button:focus-visible,textarea:focus-visible,.tick input:focus-visible{
-  outline:2px solid var(--teal); outline-offset:1px
-}
-.hint{font-size:12px; color:var(--ink-faint); text-transform:none; letter-spacing:normal; font-weight:400}
-input:disabled,select:disabled{background:var(--surface-sunk); color:var(--ink-faint); cursor:not-allowed}
+input:focus-visible,select:focus-visible,button:focus-visible,.tick input:focus-visible,
+.appl-head:focus-within{outline:2px solid var(--teal); outline-offset:1px}
+input:disabled,select:disabled{background:var(--surface-sunk); color:var(--ink-faint)}
+.hint{font-size:13px; color:var(--ink-faint); text-transform:none; letter-spacing:normal; font-weight:400}
 
-/* ---------- tables ---------- */
-.scroll{overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface)}
-table{border-collapse:collapse; width:100%; font-size:14px}
-th{
-  text-align:left; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--ink-muted); font-weight:600; padding:10px 12px;
-  background:var(--surface-sunk); border-bottom:1px solid var(--line); white-space:nowrap;
+/* ---------- bills as cards ---------- */
+.bill{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:16px; margin-bottom:12px;
 }
-td{padding:6px 12px; border-bottom:1px solid var(--line); vertical-align:middle}
-tr:last-child td{border-bottom:none}
-td input{padding:6px 8px; font-size:14px}
-.num{text-align:right; font-variant-numeric:tabular-nums}
-th.num{text-align:right}
-.cat-row td{
-  background:var(--navy-soft); font-family:var(--f-display);
-  font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase;
-  color:var(--navy); padding:8px 12px;
+.bill-top{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--line);
 }
-.appl-name{min-width:210px}
-/* Seven columns have to fit the measure without a sideways scroll on a laptop. */
-.bills td{padding-inline:8px}
-.bills input[type=date]{width:128px; padding-inline:6px}
-.bills input[type=number]{width:84px}
-.bills .col-days input{width:62px}
-.bills select{width:84px}
-.watt-default{color:var(--ink-faint); font-variant-numeric:tabular-nums; font-size:13px}
-tr.active td{background:var(--teal-soft)}
+.bill-no{font-family:var(--f-display); font-weight:600; font-size:16px}
+.bill-drop{
+  border:none; background:none; color:var(--ink-faint); font-size:13px;
+  padding:6px 8px; text-decoration:underline; cursor:pointer;
+}
+.bill-drop:hover{color:var(--bad)}
+
+/* ---------- appliances as a tick list ---------- */
+.cat{
+  font-family:var(--f-display); font-weight:600; font-size:13px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--navy);
+  background:var(--navy-soft); padding:9px 14px;
+  border:1px solid var(--line); border-bottom:none;
+}
+.cat:first-of-type{border-radius:var(--radius) var(--radius) 0 0}
+.applist{border:1px solid var(--line); border-bottom:none; background:var(--surface)}
+.applist:last-of-type{border-bottom:1px solid var(--line); border-radius:0 0 var(--radius) var(--radius)}
+.appl{border-bottom:1px solid var(--line)}
+.applist .appl:last-child{border-bottom:none}
+.appl-head{
+  display:flex; align-items:center; gap:13px; padding:13px 14px;
+  cursor:pointer; min-height:52px; user-select:none;
+}
+.appl-head input{width:23px; height:23px; flex:none; accent-color:var(--navy); margin:0; cursor:pointer}
+.appl-text{flex:1; min-width:0}
+.appl-name{display:block; font-size:15.5px; line-height:1.35}
+.appl-watt{display:block; font-size:12.5px; color:var(--ink-faint); font-variant-numeric:tabular-nums}
+.appl.on{background:var(--teal-soft)}
+.appl.on .appl-name{font-weight:600}
+.appl-detail{padding:0 14px 16px 50px; display:flex; flex-direction:column; gap:14px}
+@media (max-width:420px){.appl-detail{padding-left:16px}}
+.field-row{display:flex; flex-direction:column; gap:7px}
+.field-lab{font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted); font-weight:600}
+
+/* quantity stepper */
+.step{display:flex; align-items:center; gap:0; width:max-content;
+  border:1px solid var(--line-strong); border-radius:5px; overflow:hidden; background:var(--surface)}
+.step button{
+  border:none; background:var(--surface-sunk); color:var(--ink);
+  width:46px; height:46px; font-size:21px; line-height:1; padding:0; border-radius:0; cursor:pointer;
+}
+.step button:active{background:var(--navy-soft)}
+.step input{
+  width:62px; border:none; border-left:1px solid var(--line-strong);
+  border-right:1px solid var(--line-strong); border-radius:0;
+  text-align:center; font-size:16px; padding:11px 0; height:46px;
+}
+
+/* hour chips */
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{
+  border:1px solid var(--line-strong); background:var(--surface); color:var(--ink);
+  border-radius:20px; padding:9px 15px; font-size:14.5px; cursor:pointer;
+  min-height:42px; font-variant-numeric:tabular-nums;
+}
+.chip:active{background:var(--navy-soft)}
+.chip[aria-pressed="true"]{background:var(--navy); border-color:var(--navy); color:#fff; font-weight:600}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#0E151D}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0E151D}}
+/* the free-type fallback is an input, not another pill: a chip-shaped box
+   holding the same number as the highlighted chip reads as a second answer */
+.or-row{display:flex; align-items:center; gap:10px; margin-top:10px}
+.or-lab{font-size:13px; color:var(--ink-faint)}
+.or-input{width:108px; flex:none; padding:9px 10px; min-height:42px}
+
+/* advanced disclosure */
+.more{
+  border:none; background:none; color:var(--teal); font-size:13.5px;
+  padding:4px 0; text-decoration:underline; cursor:pointer; text-align:left; width:max-content;
+}
+.more-box{display:flex; flex-direction:column; gap:14px; padding-top:4px}
 
 /* ---------- buttons ---------- */
 button{
-  font-family:var(--f-ui); font-size:14px; font-weight:500; cursor:pointer;
-  border-radius:4px; padding:9px 16px; border:1px solid var(--line-strong);
-  background:var(--surface); color:var(--ink);
+  font-family:var(--f-ui); font-size:15px; font-weight:500; cursor:pointer;
+  border-radius:5px; padding:12px 18px; border:1px solid var(--line-strong);
+  background:var(--surface); color:var(--ink); min-height:46px;
 }
 button:hover:not(:disabled){border-color:var(--navy); color:var(--navy)}
 button:disabled{opacity:.45; cursor:not-allowed}
@@ -214,49 +267,49 @@ button.primary:hover:not(:disabled){filter:brightness(1.12); color:var(--surface
 
 /* ---------- running total ---------- */
 .tally{
-  display:flex; flex-wrap:wrap; gap:10px 28px; align-items:baseline;
-  margin-top:16px; padding:14px 18px; background:var(--surface-sunk);
+  display:flex; flex-wrap:wrap; gap:12px 26px; align-items:baseline;
+  margin-top:16px; padding:14px 16px; background:var(--surface-sunk);
   border:1px solid var(--line); border-radius:var(--radius);
 }
 .tally-item{display:flex; flex-direction:column; gap:1px}
 .tally-k{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted)}
 .tally-v{font-family:var(--f-display); font-size:20px; font-weight:600; font-variant-numeric:tabular-nums}
-.tally-note{font-size:12.5px; color:var(--ink-faint); margin-left:auto; max-width:34ch; line-height:1.45}
+.tally-note{font-size:12.5px; color:var(--ink-faint); flex-basis:100%; line-height:1.45; margin:0}
 
 /* ---------- action bar ---------- */
 .actionbar{
   position:fixed; left:0; right:0; bottom:0; z-index:20;
   background:var(--surface); border-top:1px solid var(--line-strong);
-  padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
 }
 .actionbar-inner{
-  max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap;
-  gap:10px 14px; align-items:center;
+  max-width:720px; margin:0 auto; display:flex; flex-wrap:wrap;
+  gap:8px 12px; align-items:center;
 }
-.status{font-size:13px; color:var(--ink-muted); margin-right:auto; max-width:60ch}
-.status b{color:var(--ink)}
-.status.ok{color:var(--good)} .status.ok b{color:var(--good)}
+.status{font-size:13.5px; color:var(--ink-muted); flex:1 1 100%; order:-1; line-height:1.45}
+.status.ok{color:var(--good)}
 .status.err{color:var(--bad)}
+#save{flex:1 1 auto}
 
-/* ---------- thank-you screen ---------- */
-.done{max-width:640px; padding-block:16px 40px; text-align:left}
+/* ---------- thank-you ---------- */
+.done{max-width:560px; padding-block:12px 40px}
 .done-mark{
   width:52px; height:52px; border-radius:50%; background:var(--good-soft);
   border:1px solid var(--good); color:var(--good);
-  display:grid; place-items:center; font-size:26px; line-height:1; margin-bottom:20px;
+  display:grid; place-items:center; font-size:26px; line-height:1; margin-bottom:18px;
 }
-.done h2{font-size:26px; margin-bottom:10px}
-.done p{color:var(--ink-muted); max-width:60ch}
+.done h2{font-size:25px; margin-bottom:10px}
+.done p{color:var(--ink-muted); max-width:56ch}
 .code-badge{
-  display:inline-flex; flex-direction:column; gap:2px; margin:20px 0;
+  display:inline-flex; flex-direction:column; gap:2px; margin:18px 0;
   padding:14px 20px; background:var(--surface); border:1px solid var(--line-strong);
   border-left:3px solid var(--teal); border-radius:var(--radius);
 }
 .code-badge span{font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-muted)}
 .code-badge b{font-family:var(--f-display); font-size:28px; font-weight:700; letter-spacing:.04em}
 .done-next{
-  margin-top:8px; padding:16px 18px; background:var(--surface-sunk);
-  border:1px solid var(--line); border-radius:var(--radius); font-size:14px;
+  margin-top:8px; padding:16px; background:var(--surface-sunk);
+  border:1px solid var(--line); border-radius:var(--radius); font-size:14.5px;
 }
 .done-next ul{margin:8px 0 0; padding-left:20px; color:var(--ink-muted)}
 .done-next li{margin-bottom:5px}
@@ -301,8 +354,7 @@ footer{
 
 <div class="wrap" id="formWrap">
 
-  <!-- ============================ CONSENT ============================ -->
-  <section>
+<section>
     <div class="consent">
       <div class="sec-label"><span class="sec-letter">i</span><h2>Before you begin</h2></div>
       <div class="consent-body">
@@ -369,27 +421,27 @@ footer{
     <!-- ============================ A: HOUSEHOLD ============================ -->
     <section>
       <div class="sec-label"><span class="sec-letter">A</span><h2>Your household</h2></div>
-      <p class="sec-note">
-        Your household code is assigned automatically when you submit — there is
-        nothing to choose here.
-      </p>
+      <p class="sec-note">Four quick questions. Your household code is given to you at the end.</p>
       <div class="panel">
-        <div class="grid g3">
-          <label class="f">People living here
-            <input id="members" type="number" min="1" max="20" step="1" placeholder="4">
+        <div class="grid g2">
+          <label class="f">How many people live here?
+            <input id="members" type="number" inputmode="numeric" min="1" max="20" step="1" placeholder="4">
           </label>
-          <label class="f">Anyone home during the day?
+          <label class="f">Is anyone home during the day?
             <select id="daytime">
-              <option value="">&mdash;</option><option value="yes">Yes</option><option value="no">No</option>
+              <option value="">Choose&hellip;</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
             </select>
           </label>
-          <label class="f">Solar panels?
+          <label class="f">Do you have solar panels?
             <select id="solar">
-              <option value="no">No</option><option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
             </select>
           </label>
           <label class="f">If yes, size in kW
-            <input id="solarkw" type="number" min="0" step="0.1" placeholder="3.0">
+            <input id="solarkw" type="number" inputmode="decimal" min="0" step="0.1" placeholder="3.0">
           </label>
         </div>
       </div>
@@ -399,21 +451,13 @@ footer{
     <section>
       <div class="sec-label"><span class="sec-letter">B</span><h2>Your CEB bills</h2></div>
       <p class="sec-note">
-        Copy the figures straight from the bill &mdash; one row per bill. Twelve rows is far
-        more useful than one, because it shows how the same home changes between
-        summer and winter.
+        One bill is enough to take part. More is better &mdash; twelve shows how the
+        same home changes between summer and winter, which is the single most
+        useful thing you can give this study. Copy the figures straight off the bill.
       </p>
-      <div class="scroll">
-        <table class="bills">
-          <thead><tr>
-            <th>Period from</th><th>Period to</th><th>Days</th><th>Tariff</th>
-            <th class="num">kWh billed</th><th class="num">Energy Rs</th><th class="num">Total Rs</th>
-          </tr></thead>
-          <tbody id="billRows"></tbody>
-        </table>
-      </div>
-      <div class="btn-row" style="margin-top:12px">
-        <button type="button" id="addBill">Add another bill</button>
+      <div id="billCards"></div>
+      <div class="btn-row">
+        <button type="button" id="addBill">+ Add another bill</button>
         <span class="hint" id="billCount"></span>
       </div>
     </section>
@@ -422,47 +466,36 @@ footer{
     <section>
       <div class="sec-label"><span class="sec-letter">C</span><h2>Your appliances</h2></div>
       <p class="sec-note">
-        Leave a row blank if you do not have it. Put down what you actually believe,
-        not what seems reasonable &mdash; the gap between what people report and what the
-        meter records is exactly what this study exists to measure, so a rough
-        honest figure is worth more than a tidy guess.
+        Tick anything you have. Only then does it ask how many and how long you use
+        it. Skip the rest &mdash; most homes tick eight or ten things.
       </p>
-      <div class="scroll">
-        <table>
-          <thead><tr>
-            <th class="appl-name">Appliance</th>
-            <th class="num">Typical W</th>
-            <th class="num">How many</th>
-            <th class="num">Actual W</th>
-            <th class="num">Hours/day</th>
-            <th class="num">Days/month</th>
-          </tr></thead>
-          <tbody id="applRows"></tbody>
-        </table>
-      </div>
+      <p class="sec-note">
+        Give the honest answer, not the tidy one. The gap between what people think
+        they use and what the meter records is exactly what this study measures, so
+        a rough honest figure is worth more than a careful guess.
+      </p>
+      <div id="applList"></div>
 
       <div class="tally">
-        <div class="tally-item"><span class="tally-k">Appliances entered</span><span class="tally-v" id="tAppl">0</span></div>
-        <div class="tally-item"><span class="tally-k">Stated use</span><span class="tally-v" id="tKwh">0 kWh</span></div>
-        <div class="tally-item"><span class="tally-k">Connected load</span><span class="tally-v" id="tWatts">0 W</span></div>
+        <div class="tally-item"><span class="tally-k">Ticked</span><span class="tally-v" id="tAppl">0</span></div>
+        <div class="tally-item"><span class="tally-k">Works out at</span><span class="tally-v" id="tKwh">0 kWh</span></div>
         <p class="tally-note">
-          Plain arithmetic on what has been entered &mdash; watts &times; quantity &times; hours &times; days.
-          Not a prediction. It is here to catch a mis-keyed figure before you submit.
+          Plain arithmetic on what you have entered &mdash; watts &times; number &times; hours &times; days.
+          Not a prediction. It is here so an obvious slip shows up before you send.
         </p>
       </div>
     </section>
 
     <!-- ============================ D: NOTES ============================ -->
     <section>
-      <div class="sec-label"><span class="sec-letter">D</span><h2>Anything else</h2></div>
+      <div class="sec-label"><span class="sec-letter">D</span><h2>Anything else?</h2></div>
       <p class="sec-note">
-        Anything that might explain an unusual bill: a long absence during the billing
-        period, a new appliance, guests staying, a reading marked estimated rather
-        than actual.
+        Optional. Anything that might explain an unusual bill &mdash; away for a few
+        weeks, a new appliance, guests staying, a reading marked estimated.
       </p>
       <div class="panel">
         <label class="f">Notes
-          <input id="notes" placeholder="Away for two weeks in July; reading marked estimated" autocomplete="off" maxlength="500">
+          <input id="notes" placeholder="Away for two weeks in July" autocomplete="off" maxlength="500">
         </label>
       </div>
     </section>
@@ -509,7 +542,7 @@ footer{
 
 <div class="actionbar" id="actionbar">
   <div class="actionbar-inner">
-    <span class="status" id="status">Awaiting consent.</span>
+    <span class="status" id="status">Tick the four boxes above to begin.</span>
     <button type="button" id="rescue" hidden>Download my answers</button>
     <button type="button" class="primary" id="save" disabled>Submit</button>
   </div>
@@ -519,9 +552,9 @@ footer{
   "use strict";
 
   /* ==================================================================== *
-   *  CONFIG — fill these two in before hosting the page.                 *
-   *  SETUP.md next to this file explains where each value comes from.    *
+   *  CONFIG — see SETUP.md.                                              *
    * ==================================================================== */
+  var CONFIG = {
   var CONFIG = {
     // The Apps Script web app URL, ending in /exec. From Deploy → New
     // deployment → Web app, with "Who has access" set to Anyone.
@@ -538,9 +571,9 @@ footer{
   };
   /* ==================================================================== */
 
-  // The catalogue, mirroring backend/seeds/seed_appliances.py. Names must match
-  // exactly: the evaluation script looks each one up in the seeded catalogue, so
-  // a free-typed "aircon" would simply fail to resolve.
+  // Mirrors backend/seeds/seed_appliances.py. The names must match it exactly:
+  // the evaluation script looks each one up in the seeded catalogue, so a
+  // free-typed "aircon" would simply fail to resolve.
   var CATALOGUE = [
     ["Cooling", [["Air Conditioner (9000 BTU)",900],["Air Conditioner (12000 BTU)",1200],
       ["Air Conditioner (18000 BTU)",1800],["Ceiling Fan",75],["Standing Fan",55]]],
@@ -556,15 +589,17 @@ footer{
     ["Lighting", [["LED Bulb",9],["Energy-saving Bulb (CFL)",18],["Fluorescent Tube",36],["Incandescent Bulb",60]]],
     ["Other", [["Water Pump",750],["Vacuum Cleaner",1400],["Hair Dryer",1500],["Electric Water Dispenser",550]]]
   ];
+
   var MAX_BILLS = 12;
+  var HOUR_CHOICES = [1, 2, 4, 6, 8, 12, 24];
 
   var $ = function (id) { return document.getElementById(id); };
-  var submitted = false;   // one submission per page load
-  var inFlight = false;
-  var lastRecord = null;   // kept only so a failed submission can be rescued
+  var submitted = false, inFlight = false, lastRecord = null;
+  var billSeq = 0;
 
   function slug(s) { return s.replace(/[^a-z0-9]+/gi, "_").toLowerCase(); }
   function num(el) { var v = parseFloat(el && el.value); return isFinite(v) ? v : 0; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); }
 
   // ---------------------------------------------------------------- config
   function unset(v) { return !v || v.indexOf("PASTE_") === 0 || v.indexOf("PUT_") === 0; }
@@ -575,79 +610,181 @@ footer{
     if (unset(CONFIG.TOKEN)) missing.push("the token");
     if (unset(CONFIG.CONTACT)) missing.push("the contact address");
     if (!missing.length) return true;
-    $("setupWhat").textContent =
-      "Still to set: " + missing.join(", ") + ". ";
+    $("setupWhat").textContent = "Still to set: " + missing.join(", ") + ". ";
     $("setupWarn").hidden = false;
     return false;
   }
 
-  // ---------------------------------------------------------------- bills
-  function billRow(i) {
-    var tr = document.createElement("tr");
-    tr.innerHTML =
-      '<td><input type="date" id="b' + i + '_from"></td>' +
-      '<td><input type="date" id="b' + i + '_to"></td>' +
-      '<td class="col-days"><input type="number" id="b' + i + '_days" min="20" max="40" step="1" placeholder="30"></td>' +
-      '<td><select id="b' + i + '_tariff">' +
-        '<option value="">&mdash;</option><option>110A</option><option>110</option>' +
-        '<option selected>120</option><option>140</option></select></td>' +
-      '<td><input type="number" id="b' + i + '_kwh" min="0" step="1" class="num" placeholder="412"></td>' +
-      '<td><input type="number" id="b' + i + '_energy" min="0" step="0.01" class="num" placeholder="3021"></td>' +
-      '<td><input type="number" id="b' + i + '_total" min="0" step="0.01" class="num" placeholder="3021"></td>';
-    return tr;
+  /* ====================================================================
+   *  BILLS — one card each, fields stacked. The old version was a seven
+   *  column table that scrolled sideways on a phone, so you could not see
+   *  which column you were typing into.
+   * ==================================================================== */
+
+  function billCard(i) {
+    var card = document.createElement("div");
+    card.className = "bill";
+    card.id = "bill" + i;
+    card.innerHTML =
+      '<div class="bill-top">' +
+        '<span class="bill-no">Bill <span class="bn"></span></span>' +
+        '<button type="button" class="bill-drop" data-drop="' + i + '">Remove</button>' +
+      '</div>' +
+      '<div class="grid g2">' +
+        '<label class="f">Billing period from' +
+          '<input type="date" id="b' + i + '_from"></label>' +
+        '<label class="f">Billing period to' +
+          '<input type="date" id="b' + i + '_to"></label>' +
+        '<label class="f">Units consumed (kWh)' +
+          '<input type="number" inputmode="numeric" id="b' + i + '_kwh" min="0" step="1" placeholder="412">' +
+          '<span class="hint">The &ldquo;units consumed&rdquo; figure &mdash; not the meter reading.</span></label>' +
+        '<label class="f">Total amount payable (Rs)' +
+          '<input type="number" inputmode="decimal" id="b' + i + '_total" min="0" step="0.01" placeholder="3155"></label>' +
+        '<label class="f">Tariff code' +
+          '<select id="b' + i + '_tariff">' +
+            '<option value="">I don’t know</option>' +
+            '<option>110A</option><option>110</option>' +
+            '<option selected>120</option><option>140</option></select>' +
+          '<span class="hint">Printed on the bill. Leave as is if unsure.</span></label>' +
+        '<label class="f">Energy charge (Rs) <span class="hint">optional</span>' +
+          '<input type="number" inputmode="decimal" id="b' + i + '_energy" min="0" step="0.01" placeholder="3021"></label>' +
+      '</div>' +
+      '<input type="hidden" id="b' + i + '_days">';
+    return card;
   }
 
   function addBill() {
-    var body = $("billRows");
-    if (body.children.length >= MAX_BILLS) return;
-    var i = body.children.length;
-    body.appendChild(billRow(i));
+    var host = $("billCards");
+    if (host.children.length >= MAX_BILLS) return;
+    var i = billSeq++;
+    host.appendChild(billCard(i));
+
     var from = $("b" + i + "_from"), to = $("b" + i + "_to");
-    // Day count is what the per-day normalisation uses, so derive it rather than
+    // The day count is what the per-day normalisation uses. Deriving it beats
     // asking someone to subtract two dates in their head.
     function derive() {
-      if (from.value && to.value) {
-        var d = (new Date(to.value) - new Date(from.value)) / 86400000;
-        if (d > 0 && d < 100) $("b" + i + "_days").value = Math.round(d);
-      }
+      var d = (from.value && to.value)
+        ? (new Date(to.value) - new Date(from.value)) / 86400000 : 0;
+      $("b" + i + "_days").value = (d > 0 && d < 100) ? Math.round(d) : "";
     }
     from.addEventListener("change", derive);
     to.addEventListener("change", derive);
-    $("addBill").disabled = body.children.length >= MAX_BILLS;
-    $("billCount").textContent = body.children.length + " of " + MAX_BILLS + " rows";
+    renumberBills();
   }
 
-  // ------------------------------------------------------------ appliances
+  function renumberBills() {
+    var cards = $("billCards").children;
+    for (var k = 0; k < cards.length; k++) {
+      cards[k].querySelector(".bn").textContent = k + 1;
+      cards[k].querySelector(".bill-drop").hidden = cards.length === 1;
+    }
+    $("addBill").disabled = cards.length >= MAX_BILLS;
+    $("billCount").textContent = cards.length === 1
+      ? "1 bill so far — add more if you have them"
+      : cards.length + " bills — thank you, this is the useful part";
+  }
+
+  /* ====================================================================
+   *  APPLIANCES — a tick list. Nothing is asked about an appliance until
+   *  it has been ticked, so a household that owns eight things answers
+   *  eight questions instead of skipping past a hundred and fifty boxes.
+   * ==================================================================== */
+
+  function applianceRow(name, watts) {
+    var id = "a_" + slug(name);
+    var chips = HOUR_CHOICES.map(function (h) {
+      return '<button type="button" class="chip" data-h="' + h + '" data-for="' + id + '" ' +
+             'aria-pressed="false">' + h + 'h</button>';
+    }).join("");
+
+    return '' +
+      '<div class="appl" id="' + id + '_row">' +
+        '<label class="appl-head" for="' + id + '_on">' +
+          '<input type="checkbox" id="' + id + '_on">' +
+          '<span class="appl-text">' +
+            '<span class="appl-name">' + esc(name) + '</span>' +
+            '<span class="appl-watt">about ' + watts + ' W</span>' +
+          '</span>' +
+        '</label>' +
+        '<div class="appl-detail" id="' + id + '_detail" hidden>' +
+          '<div class="field-row">' +
+            '<span class="field-lab">How many?</span>' +
+            '<span class="step">' +
+              '<button type="button" data-step="-1" data-for="' + id + '" aria-label="one fewer">&minus;</button>' +
+              '<input type="number" inputmode="numeric" id="' + id + '_q" min="1" max="100" step="1" value="1">' +
+              '<button type="button" data-step="1" data-for="' + id + '" aria-label="one more">+</button>' +
+            '</span>' +
+          '</div>' +
+          '<div class="field-row">' +
+            '<span class="field-lab">Hours a day</span>' +
+            '<span class="chips">' + chips + '</span>' +
+            '<span class="or-row">' +
+              '<label class="or-lab" for="' + id + '_h">or type it</label>' +
+              '<input type="number" inputmode="decimal" class="or-input" id="' + id + '_h" ' +
+                     'min="0" max="24" step="0.5" placeholder="e.g. 3.5">' +
+            '</span>' +
+          '</div>' +
+          '<button type="button" class="more" data-more="' + id + '">More detail</button>' +
+          '<div class="more-box" id="' + id + '_more" hidden>' +
+            '<div class="field-row">' +
+              '<span class="field-lab">Exact watts, if the label says</span>' +
+              '<input type="number" inputmode="numeric" id="' + id + '_w" min="1" max="20000" step="1" ' +
+                     'placeholder="' + watts + '">' +
+            '</div>' +
+            '<div class="field-row">' +
+              '<span class="field-lab">Days a month you use it</span>' +
+              '<input type="number" inputmode="numeric" id="' + id + '_d" min="1" max="31" step="1" ' +
+                     'placeholder="30">' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+  }
+
   function buildAppliances() {
-    var body = $("applRows"), html = "";
+    var html = "";
     CATALOGUE.forEach(function (pair) {
-      html += '<tr class="cat-row"><td colspan="6">' + pair[0] + "</td></tr>";
-      pair[1].forEach(function (a) {
-        var id = "a_" + slug(a[0]);
-        html +=
-          '<tr data-row="' + id + '">' +
-          '<td class="appl-name">' + a[0].replace(/"/g, "&quot;") + "</td>" +
-          '<td class="num watt-default">' + a[1] + "</td>" +
-          '<td><input type="number" min="0" step="1" class="num" id="' + id + '_q" style="width:74px"></td>' +
-          '<td><input type="number" min="1" step="1" class="num" id="' + id + '_w" style="width:86px" placeholder="' + a[1] + '"></td>' +
-          '<td><input type="number" min="0" max="24" step="0.5" class="num" id="' + id + '_h" style="width:82px"></td>' +
-          '<td><input type="number" min="1" max="31" step="1" class="num" id="' + id + '_d" style="width:90px" placeholder="30"></td>' +
-          "</tr>";
-      });
+      html += '<div class="cat">' + esc(pair[0]) + "</div>";
+      html += '<div class="applist">';
+      pair[1].forEach(function (a) { html += applianceRow(a[0], a[1]); });
+      html += "</div>";
     });
-    body.innerHTML = html;
+    $("applList").innerHTML = html;
+  }
+
+  function isOn(id) { var el = $(id + "_on"); return !!(el && el.checked); }
+
+  function toggleAppliance(id) {
+    var on = isOn(id);
+    $(id + "_detail").hidden = !on;
+    $(id + "_row").classList.toggle("on", on);
+    if (!on) {
+      ["_h", "_w", "_d"].forEach(function (s) { $(id + s).value = ""; });
+      $(id + "_q").value = "1";
+      setChips(id, null);
+      $(id + "_more").hidden = true;
+    }
+    retally();
+  }
+
+  function setChips(id, hours) {
+    var chips = document.querySelectorAll('.chip[data-for="' + id + '"]');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].setAttribute("aria-pressed",
+        hours !== null && parseFloat(chips[i].dataset.h) === hours ? "true" : "false");
+    }
   }
 
   function collectAppliances() {
     var out = [];
     CATALOGUE.forEach(function (pair) {
       pair[1].forEach(function (a) {
-        var id = "a_" + slug(a[0]), q = num($(id + "_q"));
-        if (q <= 0) return;
+        var id = "a_" + slug(a[0]);
+        if (!isOn(id)) return;
         out.push({
           appliance_name: a[0],
           category: pair[0],
-          quantity: q,
+          quantity: Math.max(1, num($(id + "_q")) || 1),
           power_watts: num($(id + "_w")) || a[1],
           hours_per_day: num($(id + "_h")),
           days_per_month: num($(id + "_d")) || 30
@@ -658,24 +795,16 @@ footer{
   }
 
   function retally() {
-    var items = collectAppliances(), kwh = 0, watts = 0;
+    var items = collectAppliances(), kwh = 0;
     items.forEach(function (it) {
       kwh += (it.power_watts * it.quantity * it.hours_per_day * it.days_per_month) / 1000;
-      watts += it.power_watts * it.quantity;
     });
     $("tAppl").textContent = items.length;
     $("tKwh").textContent = Math.round(kwh).toLocaleString() + " kWh";
-    $("tWatts").textContent = Math.round(watts).toLocaleString() + " W";
-    CATALOGUE.forEach(function (pair) {
-      pair[1].forEach(function (a) {
-        var id = "a_" + slug(a[0]);
-        var tr = document.querySelector('[data-row="' + id + '"]');
-        if (tr) tr.classList.toggle("active", num($(id + "_q")) > 0);
-      });
-    });
   }
 
-  // --------------------------------------------------------------- consent
+  /* ----------------------------------------------------------- consent -- */
+
   function consentGiven() {
     return $("c1").checked && $("c2").checked && $("c3").checked && $("c4").checked;
   }
@@ -686,11 +815,11 @@ footer{
     $("formArea").setAttribute("aria-disabled", ok ? "false" : "true");
     $("lockbar").dataset.state = ok ? "open" : "locked";
     $("lockmsg").textContent = ok
-      ? "Consent recorded. The form is open."
+      ? "Thank you. The form below is now open."
       : "Tick all four statements to unlock the form.";
     $("save").disabled = !ok || inFlight;
-    if (!ok) setStatus("Awaiting consent.");
-    else if ($("status").textContent === "Awaiting consent.") setStatus("Ready.");
+    if (!ok) setStatus("Tick the four boxes above to begin.");
+    else if (/Tick the four boxes/.test($("status").textContent)) setStatus("Ready when you are.");
   }
 
   function setStatus(msg, kind) {
@@ -699,10 +828,12 @@ footer{
     el.className = "status" + (kind ? " " + kind : "");
   }
 
-  // ---------------------------------------------------------------- record
+  /* ------------------------------------------------------------ record -- */
+
   function gather() {
-    var bills = [];
-    for (var i = 0; i < $("billRows").children.length; i++) {
+    var bills = [], cards = $("billCards").children;
+    for (var k = 0; k < cards.length; k++) {
+      var i = cards[k].id.replace("bill", "");
       var kwh = num($("b" + i + "_kwh"));
       if (!kwh) continue;
       bills.push({
@@ -729,36 +860,42 @@ footer{
 
   function problems(rec) {
     var p = [];
-    if (!rec.members) p.push("the number of people living there");
-    if (!rec.bills.length) p.push("at least one bill with its kWh");
-    if (!rec.appliances.length) p.push("at least one appliance");
+    if (!rec.members) p.push("how many people live there (section A)");
+    if (!rec.bills.length) p.push("at least one bill with its units consumed (section B)");
+    if (!rec.appliances.length) p.push("at least one appliance ticked (section C)");
+
+    var noHours = rec.appliances.filter(function (a) { return !a.hours_per_day; });
+    if (noHours.length) {
+      p.push("hours a day for " + noHours.slice(0, 3).map(function (a) {
+        return a.appliance_name;
+      }).join(", ") + (noHours.length > 3 ? " and " + (noHours.length - 3) + " more" : ""));
+    }
     return p;
   }
 
-  // ------------------------------------------------------------------- csv
-  // Only used for the rescue download, so an answered form is never lost to a
-  // dropped connection. The column order matches docs/survey/households.csv and
-  // appliances.csv exactly, so a rescued file can be pasted straight in.
+  /* --------------------------------------------------------------- csv -- */
+  // Only for the rescue download, so an answered form is never lost to a
+  // dropped connection. Column order matches households.csv / appliances.csv.
+
   function csvEscape(v) {
     v = v === undefined || v === null ? "" : String(v);
     return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
   }
 
   function rescueText(rec) {
-    var hCols = ["household_id","period_start","period_end","days_in_period",
-      "tariff_category","billed_kwh","energy_charge_rs","other_charges_rs",
-      "total_bill_rs","members","daytime_occupancy","has_solar","solar_kwp","notes"];
-    var aCols = ["household_id","appliance_name","quantity","power_watts",
-      "hours_per_day","days_per_month"];
     var id = rec.household_id || "UNASSIGNED";
-    var out = ["# households.csv", hCols.join(",")];
+    var out = ["# households.csv",
+      "household_id,period_start,period_end,days_in_period,tariff_category," +
+      "billed_kwh,energy_charge_rs,other_charges_rs,total_bill_rs,members," +
+      "daytime_occupancy,has_solar,solar_kwp,notes"];
     rec.bills.forEach(function (b) {
       out.push([id, b.period_start, b.period_end, b.days_in_period, b.tariff_category,
         b.billed_kwh, b.energy_charge_rs, "", b.total_bill_rs, rec.members,
         rec.daytime_occupancy, rec.has_solar, rec.solar_kwp, rec.notes]
         .map(csvEscape).join(","));
     });
-    out.push("", "# appliances.csv", aCols.join(","));
+    out.push("", "# appliances.csv",
+      "household_id,appliance_name,quantity,power_watts,hours_per_day,days_per_month");
     rec.appliances.forEach(function (a) {
       out.push([id, a.appliance_name, a.quantity, a.power_watts,
         a.hours_per_day, a.days_per_month].map(csvEscape).join(","));
@@ -769,21 +906,17 @@ footer{
   function rescue() {
     if (!lastRecord) return;
     var blob = new Blob([rescueText(lastRecord)], { type: "text/csv;charset=utf-8" });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url;
-    a.download = "my-electricity-answers.csv";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    var url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = "my-electricity-answers.csv";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
     setStatus("Saved to your device. Please send that file to the researcher.", "ok");
   }
 
-  // ------------------------------------------------------------------ post
-  // Content-Type text/plain keeps this a CORS-simple request, so the browser
-  // sends no preflight — Apps Script web apps do not answer OPTIONS, and a
-  // JSON content type would fail before the request ever left the page.
+  /* -------------------------------------------------------------- post -- */
+  // text/plain keeps this a CORS-simple request, so the browser sends no
+  // preflight — Apps Script web apps do not answer OPTIONS.
+
   function post(payload) {
     return fetch(CONFIG.ENDPOINT, {
       method: "POST",
@@ -815,7 +948,7 @@ footer{
     if (submitted || inFlight) return;
     var rec = gather(), p = problems(rec);
     if (p.length) {
-      setStatus("Still needed: " + p.join(", ") + ".", "err");
+      setStatus("Almost there — still needed: " + p.join("; ") + ".", "err");
       return;
     }
     lastRecord = rec;
@@ -831,30 +964,74 @@ footer{
       inFlight = false;
       $("save").disabled = false;
       $("rescue").hidden = false;
-      var why = err && err.message === "refused"
+      setStatus((err && err.message === "refused"
         ? "The server refused the submission."
-        : "Could not reach the server.";
-      setStatus(why + " Nothing was lost — press Submit again, or download your " +
-        "answers and send them on.", "err");
+        : "Could not reach the server.") +
+        " Nothing was lost — press Submit again, or download your answers and send them on.", "err");
     });
   }
 
-  // ------------------------------------------------------------------ boot
+  /* -------------------------------------------------------------- boot -- */
+
   buildAppliances();
   addBill();
 
   ["c1","c2","c3","c4"].forEach(function (k) { $(k).addEventListener("change", refreshConsent); });
   $("addBill").addEventListener("click", addBill);
-  $("applRows").addEventListener("input", retally);
   $("save").addEventListener("click", save);
   $("rescue").addEventListener("click", rescue);
+
   $("solar").addEventListener("change", function () {
-    $("solarkw").disabled = $("solar").value !== "yes";
-    if ($("solar").value !== "yes") $("solarkw").value = "";
+    var yes = $("solar").value === "yes";
+    $("solarkw").disabled = !yes;
+    if (!yes) $("solarkw").value = "";
   });
   $("solarkw").disabled = true;
 
-  // Half-filled forms are easy to lose to a stray back-swipe on a phone.
+  // One delegated listener rather than several hundred.
+  $("applList").addEventListener("change", function (e) {
+    var t = e.target;
+    if (t.type === "checkbox" && t.id.slice(-3) === "_on") {
+      toggleAppliance(t.id.slice(0, -3));
+    } else {
+      if (t.id && t.id.slice(-2) === "_h") setChips(t.id.slice(0, -2), num(t) || null);
+      retally();
+    }
+  });
+
+  $("applList").addEventListener("input", function (e) {
+    if (e.target.tagName === "INPUT" && e.target.type === "number") retally();
+  });
+
+  $("applList").addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("button") : null;
+    if (!b) return;
+
+    if (b.dataset.h) {                       // an hours chip
+      var id = b.dataset.for, h = parseFloat(b.dataset.h);
+      $(id + "_h").value = h;
+      setChips(id, h);
+      retally();
+    } else if (b.dataset.step) {             // quantity stepper
+      var q = $(b.dataset.for + "_q");
+      q.value = Math.min(100, Math.max(1, (parseInt(q.value, 10) || 1) + parseInt(b.dataset.step, 10)));
+      retally();
+    } else if (b.dataset.more) {             // the exact-watts disclosure
+      var box = $(b.dataset.more + "_more");
+      box.hidden = !box.hidden;
+      b.textContent = box.hidden ? "More detail" : "Hide extra detail";
+    }
+  });
+
+  $("billCards").addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-drop]") : null;
+    if (!b) return;
+    if ($("billCards").children.length <= 1) return;
+    $("bill" + b.dataset.drop).remove();
+    renumberBills();
+  });
+
+  // A half-filled form is easy to lose to a stray back-swipe on a phone.
   window.addEventListener("beforeunload", function (e) {
     if (submitted || inFlight) return;
     if (!consentGiven()) return;
@@ -868,7 +1045,6 @@ footer{
 
   if (!checkConfig()) {
     $("save").disabled = true;
-    $("save").title = "This page has not been configured yet.";
     setStatus("This page is not ready to receive submissions.", "err");
     ["c1","c2","c3","c4"].forEach(function (k) { $(k).disabled = true; });
   }
